@@ -1,5 +1,5 @@
---- # ping playbook to check hosts
-- hosts: all
-
-  tasks:
-    -ping
+tasks:
+- name: ping test
+  shell: ping -c 1 -w 2 {{ ansible_host }}
+  delegate_to: localhost
+  ignore_errors: true
