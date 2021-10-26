@@ -1,0 +1,7 @@
+--- # ping playbook to check hosts
+- hosts: all
+
+  become: yes
+
+  tasks:
+    -ping
